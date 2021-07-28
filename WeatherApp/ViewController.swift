@@ -1,9 +1,8 @@
 //
 //  ViewController.swift
 //  WeatherApp
-//
+
 //  Created by 김모경 on 2021/07/28.
-//
 
 import UIKit
 

@@ -13,6 +13,7 @@
 		BB38D03526B1919D00597166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB38D03326B1919D00597166 /* Main.storyboard */; };
 		BB38D03726B1919E00597166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB38D03626B1919E00597166 /* Assets.xcassets */; };
 		BB38D03A26B1919E00597166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB38D03826B1919E00597166 /* LaunchScreen.storyboard */; };
+		BB38D04226B1D0A000597166 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38D04126B1D0A000597166 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BB38D03626B1919E00597166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB38D03926B1919E00597166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB38D03B26B1919E00597166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB38D04126B1D0A000597166 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BB38D03626B1919E00597166 /* Assets.xcassets */,
 				BB38D03826B1919E00597166 /* LaunchScreen.storyboard */,
 				BB38D03B26B1919E00597166 /* Info.plist */,
+				BB38D04126B1D0A000597166 /* Common.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB38D04226B1D0A000597166 /* Common.swift in Sources */,
 				BB38D03226B1919D00597166 /* ViewController.swift in Sources */,
 				BB38D02E26B1919D00597166 /* AppDelegate.swift in Sources */,
 				BB38D03026B1919D00597166 /* SceneDelegate.swift in Sources */,

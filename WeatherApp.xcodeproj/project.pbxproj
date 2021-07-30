@@ -30,6 +30,8 @@
 		BB38D04126B1D0A000597166 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		BB38D04426B3239E00597166 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		BB38D04626B323B900597166 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		BB38D04926B3409F00597166 /* CurrentWeatherApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CurrentWeatherApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BB38D04A26B3C8B400597166 /* ForecastApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ForecastApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		BB38D02C26B1919D00597166 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				BB38D04826B3408000597166 /* Api */,
 				BB38D04326B3237A00597166 /* Cell */,
 				BB38D02D26B1919D00597166 /* AppDelegate.swift */,
 				BB38D02F26B1919D00597166 /* SceneDelegate.swift */,
@@ -82,6 +85,15 @@
 				BB38D04626B323B900597166 /* ForecastTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BB38D04826B3408000597166 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				BB38D04926B3409F00597166 /* CurrentWeatherApi.playground */,
+				BB38D04A26B3C8B400597166 /* ForecastApi.playground */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

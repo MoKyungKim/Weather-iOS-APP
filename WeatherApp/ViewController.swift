@@ -15,7 +15,6 @@ class ViewController: UIViewController {
 
     }
 
-
 }
 
 //데이터 소스
@@ -49,4 +48,6 @@ extension ViewController : UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
+    
 }

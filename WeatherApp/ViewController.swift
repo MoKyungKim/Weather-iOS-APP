@@ -9,8 +9,9 @@ import CoreLocation
 class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
-    
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    
     
     var topInset = CGFloat(0.0)
     //첫번재 셀의 높이를 가져와야함
@@ -34,6 +35,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //테이블뷰를 숨기고 로더 표시
+        listTableView.alpha = 0.0
+        loader.alpha = 1.0
+        
+        
         //배경 색 설정
         listTableView.backgroundColor = .clear
         listTableView.separatorStyle = .none
@@ -53,6 +59,12 @@ class ViewController: UIViewController {
     
             //35.130134, 126.890895 우리 집
             //37.498206 127.02761 강남역
+            
+            UIView.animate(withDuration: 0.3){
+                self.listTableView.alpha = 1.0
+                self.loader.alpha = 0.0
+            }
+            
         }
         
     }

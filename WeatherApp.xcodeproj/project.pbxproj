@@ -22,6 +22,7 @@
 		BB38D05426B3F0A100597166 /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38D05326B3F0A100597166 /* WeatherDataSource.swift */; };
 		BB38D05826B4026000597166 /* Double+Fomatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38D05726B4026000597166 /* Double+Fomatter.swift */; };
 		BB38D05A26B422DE00597166 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38D05926B422DE00597166 /* Date+Formatter.swift */; };
+		BB38D05F26B4FAAA00597166 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38D05E26B4FAAA00597166 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BB38D05326B3F0A100597166 /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		BB38D05726B4026000597166 /* Double+Fomatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Fomatter.swift"; sourceTree = "<group>"; };
 		BB38D05926B422DE00597166 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		BB38D05E26B4FAAA00597166 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		BB38D02C26B1919D00597166 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				BB38D05D26B4FA9600597166 /* Location */,
 				BB38D05626B4023A00597166 /* Fomatter */,
 				BB38D05226B3F09200597166 /* Data */,
 				BB38D04B26B3E0E700597166 /* Model */,
@@ -136,6 +139,14 @@
 				BB38D05926B422DE00597166 /* Date+Formatter.swift */,
 			);
 			path = Fomatter;
+			sourceTree = "<group>";
+		};
+		BB38D05D26B4FA9600597166 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				BB38D05E26B4FAAA00597166 /* LocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				BB38D05426B3F0A100597166 /* WeatherDataSource.swift in Sources */,
 				BB38D04526B3239E00597166 /* SummaryTableViewCell.swift in Sources */,
 				BB38D03026B1919D00597166 /* SceneDelegate.swift in Sources */,
+				BB38D05F26B4FAAA00597166 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

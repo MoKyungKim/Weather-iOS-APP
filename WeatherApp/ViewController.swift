@@ -10,6 +10,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
     
+    @IBOutlet weak var locationLabel: UILabel!
+    
     var topInset = CGFloat(0.0)
     //첫번재 셀의 높이를 가져와야함
     
@@ -37,13 +39,22 @@ class ViewController: UIViewController {
         listTableView.separatorStyle = .none
         listTableView.showsVerticalScrollIndicator = false
         
-        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
-        WeatherDataSource.shared.fetch(location: location){
-            self.listTableView.reloadData()
-        }
+        //고정된 임시좌표 사용할 시
+//        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
+//        WeatherDataSource.shared.fetch(location: location){
+//            self.listTableView.reloadData()
+//        }
         
         LocationManager.shared.updateLocation()
 
+        NotificationCenter.default.addObserver(forName: WeatherDataSource.weatherInfoDidUpdate, object: nil, queue: .main){ (noti) in
+            self.listTableView.reloadData()
+            self.locationLabel.text = LocationManager.shared.currentLocationTitle
+    
+            //35.130134, 126.890895 우리 집
+            //37.498206 127.02761 강남역
+        }
+        
     }
 
 }

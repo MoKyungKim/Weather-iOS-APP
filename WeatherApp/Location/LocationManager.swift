@@ -21,8 +21,21 @@ class LocationManager: NSObject {
     
     let manager: CLLocationManager
     
-    //파싱된 주소를 저장
-    var currentLocationTitle: String?
+    var currentLocationTitle: String? {  //파싱된 주소를 저장
+        didSet{
+            var userInfo = [AnyHashable: Any]()
+            if let location = currentLocation {
+                userInfo["location"] = location
+            }
+            NotificationCenter.default.post(name: Self.currentLocationDidUpdate, object: nil, userInfo: userInfo)
+            //==> LocationManager에서는 새로운 좌표를 얻은 다음, reverse geocoding을 완료하고 이렇게 notification을 posting함
+            //그러면 이 notificaton을 WeatherDatasource.swift가 받아서 api를 요청함
+        }
+    }
+    var currentLocation: CLLocation?
+    
+    static let currentLocationDidUpdate = Notification.Name(rawValue: "currentLocationDidUpdate")
+    
     
     
     //외부에서 호출하는 메서드
@@ -128,8 +141,12 @@ extension LocationManager: CLLocationManagerDelegate{
         //print(locations.last)
         
         if let location = locations.last{
+            currentLocation = location
             updateAddress(from: location)
         }
+        
+        //좌표를 얻은 다음, api 요청을 전달함
+        
     }
     
     

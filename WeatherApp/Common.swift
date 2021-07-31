@@ -9,3 +9,6 @@ import Foundation
 
 let apiKey = "c743b6f0525323b2e938723c9ca76ef0"
 
+//광주
+//35.166672
+//126.916672

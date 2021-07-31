@@ -2,6 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>http://api.openweathermap.org/data/2.5/weather?lat=37.498206&amp;lon=127.02761&amp;appid=c743b6f0525323b2e938723c9ca76ef0&amp;units=metric&amp;lang=kr</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>http://api.openweathermap.org/data/2.5/forecast?lat=37.498206&amp;lon=127.02761&amp;appid=c743b6f0525323b2e938723c9ca76ef0&amp;units=metric&amp;lang=kr, - 2</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Allow Arbitrary Loads</key>
+		<true/>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

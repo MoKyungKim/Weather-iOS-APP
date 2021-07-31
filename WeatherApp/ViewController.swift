@@ -10,8 +10,32 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
     
+    var topInset = CGFloat(0.0)
+    //첫번재 셀의 높이를 가져와야함
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if topInset == 0.0{
+            let firstIndexPath = IndexPath(row: 0, section: 0)
+            if let cell = listTableView.cellForRow(at: firstIndexPath){ //첫번째 셀을 가져옴
+                topInset = listTableView.frame.height - cell.frame.height   //위쪽 여백 높이
+                
+                //값 넣기
+                var inset = listTableView.contentInset
+                inset.top = topInset
+                listTableView.contentInset = inset  //위쪽에 여백 추가됨
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //배경 색 설정
+        listTableView.backgroundColor = .clear
+        listTableView.separatorStyle = .none
+        listTableView.showsVerticalScrollIndicator = false
         
         let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
         WeatherDataSource.shared.fetch(location: location){
